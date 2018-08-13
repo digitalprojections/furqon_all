@@ -129,7 +129,7 @@ document.addEventListener('show', function (event) {
         case "surah_text":
             console.log("surah text");
             select_surah();
-            showBannerFunc();
+            //showBannerFunc();
             break;
         case "settings":
             set_settings();
