@@ -419,4 +419,12 @@ function registerAdEvents() {
         document.addEventListener('onPresentInterstitialAd', function(){ });
         document.addEventListener('onDismissInterstitialAd', function(){ });
     }
- 
+ //display the banner
+function showBannerFunc(){
+    window.plugins.AdMob.createBannerView();
+}
+//display the interstitial
+function showInterstitialFunc(){
+    window.plugins.AdMob.createInterstitialView();	//get the interstitials ready to be shown and show when it's loaded.
+    window.plugins.AdMob.requestInterstitialAd();
+}
