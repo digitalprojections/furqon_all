@@ -1,0 +1,70 @@
+{
+  "_from": "cordova-plugin-native-transitions",
+  "_id": "cordova-plugin-native-transitions@0.2.3",
+  "_inBundle": false,
+  "_integrity": "sha1-rZQDu56fc1U0XRYjgmreb1CjHq8=",
+  "_location": "/cordova-plugin-native-transitions",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-native-transitions",
+    "name": "cordova-plugin-native-transitions",
+    "escapedName": "cordova-plugin-native-transitions",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-native-transitions/-/cordova-plugin-native-transitions-0.2.3.tgz",
+  "_shasum": "ad9403bb9e9f7355345d1623826ade6f50a31eaf",
+  "_spec": "cordova-plugin-native-transitions",
+  "_where": "C:\\Users\\ajpc\\furqon",
+  "author": {
+    "name": "Lee Crossley",
+    "email": "leee@hotmail.co.uk",
+    "url": "http://ilee.co.uk/"
+  },
+  "bugs": {
+    "url": "https://github.com/leecrossley/cordova-plugin-native-transitions/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-native-transitions",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova / PhoneGap Plugin for native transitions. Emulating transitions are a thing of the past, you can now use real native transitions directly from your JavaScript! Supports flip, curl and fade.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/leecrossley/cordova-plugin-native-transitions#readme",
+  "keywords": [
+    "cordova",
+    "transition",
+    "transitions",
+    "page",
+    "animate",
+    "animation",
+    "flip",
+    "curl",
+    "fade",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-native-transitions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leecrossley/cordova-plugin-native-transitions.git"
+  },
+  "version": "0.2.3"
+}

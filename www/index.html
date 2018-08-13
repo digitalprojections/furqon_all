@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <script src="components/loader.js"></script>
+        <script src="lib/onsenui/js/onsenui.min.js"></script>
+        <link rel="stylesheet" href="components/loader.css">
+        <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/localdb.js"></script>
+        <script type="text/javascript" src="js/surah_db.js"></script>
+
+    </head>
+    <body>
+
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-list-item onclick="fn.load('home.html')" tappable>
+                        <span id="surahlisttitle">surahlisttitle</span>
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('settings.html')" tappable>
+                        <span id="settingstitle">settingstitle</span>
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('about.html')" tappable>
+                        <span id="abouttitle">abouttitle</span>
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+    </ons-splitter>
+
+    <ons-template id="home.html">
+        <ons-page id="titles">
+            <ons-toolbar>
+
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <span id="selectsurahtitle"></span>
+                </div>
+            </ons-toolbar>            
+            <ons-list id="main_table">
+
+
+            </ons-list>
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="settings.html">
+        <ons-page id="settings">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <span id="appsettingstitle">appsettingstitle</span>
+                </div>
+            </ons-toolbar>
+            <ons-list>
+                
+                
+                <ons-list-title>
+                    <span id="menulangtitle">menulangtitle</span>
+                </ons-list-title>
+                            <ons-list-item  onmousedown="set_langauge(event)" lang-id="uzbek">
+                                <label class="left">
+                                    <ons-radio name="color" input-id="radio-1"></ons-radio>
+                                </label>
+                                <label for="radio-1" class="center">
+                                    O`zbek
+                                </label>
+                            </ons-list-item>
+                            <ons-list-item  onmousedown="set_langauge(event)" lang-id="english">
+                                <label class="left">
+                                    <ons-radio name="color" input-id="radio-2" checked></ons-radio>
+                                </label>
+                                <label for="radio-2" class="center">
+                                    English
+                                </label>
+                            </ons-list-item>
+                            <ons-list-item onmousedown="set_langauge(event)" lang-id="russian">
+                                <label class="left">
+                                    <ons-radio name="color" input-id="radio-3" ></ons-radio>
+                                </label>
+                                <label for="radio-3" class="center">
+                                    Русский
+                                </label>
+                            </ons-list-item>
+                        
+                   
+                
+            </ons-list>
+            <ons-list>
+                <ons-list-header><span id="textsettitle">textsettitle</span></ons-list-header>
+                <ons-list-item>
+                    <div class="center">
+                        <span id="izohlartitle">izohlartitle</span>
+                    </div>
+                    <div class="right">
+                        <ons-switch  input-id='izoh' onchange="izohlar(event)" class="setting_checks"></ons-switch>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="center">
+                        O'zbekcha
+                    </div>
+                    <div class="right">
+                        <ons-switch  input-id='uzbekcha' db_id='120' onchange="set_languages(event)" class="lang"></ons-switch>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="center">
+                        English
+                    </div>
+                    <div class="right">
+                        <ons-switch  input-id='english' db_id='59' onchange="set_languages(event)" class="lang" ></ons-switch>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="center">
+                        Русский
+                    </div>
+                    <div class="right">
+                        <ons-switch  input-id='russian' db_id='79' onchange="set_languages(event)" class="lang" ></ons-switch>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="center">
+                        عربى
+                    </div>
+                    <div class="right">
+                        <ons-switch  input-id='arabic' db_id='1' onchange="set_languages(event)" class="lang"></ons-switch>
+                    </div>
+                </ons-list-item>
+            </ons-list>
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="about.html">
+        <ons-page id="about">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <span id="muallifdantitle">muallifdantitle</span>
+                </div>
+            </ons-toolbar>
+
+
+            <ons-card>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmHfHYkViyMcWSXID5yRoYjlUUeG5bHhWng28Rq-Ss5RdJXxRYQA" alt="Onsen UI" style="width: 100%">
+                <div class="title">
+                    <p id="greetingtitle">Assalomu alaykum</p>
+                </div>
+                <div class="content">
+                    <div>
+
+                        <p id="greetingtext">Qadrli muxlis, biz bu dasturni sizga foydalanish qulay bo`lishi uchun baholi qudrat harakat qildik va bunda davom etmoqdamiz. </p>
+                    </div>
+                    <ons-list>
+
+                    </ons-list>
+                </div>
+            </ons-card>
+
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="surah.html">
+        <ons-page id="surah_text">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <span id="surahtitle"></span><span id="sura_title"></span>
+                </div>
+            </ons-toolbar>
+            <ons-list id='ayah_list'>
+
+            </ons-list>
+        </ons-page>
+    </ons-template>
+    <ons-modal direction="up" id="loading_circle">
+        <div style="text-align: center">
+            <p>
+            <ons-icon icon="md-spinner" size="28px" spin></ons-icon> <span id="loadingtitle"></span>
+            </p>
+        </div>
+    </ons-modal>
+</body>
+</html>
