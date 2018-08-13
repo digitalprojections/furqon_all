@@ -386,7 +386,7 @@ function initAd(){
                     interstitial: 'ca-app-pub-3838820812386239/2551267023'	//PUT ADMOB ADCODE HERE
                 },
                 android : {
-                    banner: 'ca-app-pub-3838820812386239/2551267023',		//PUT ADMOB ADCODE HERE
+                    banner: 'ca-app-pub-3838820812386239/6533462802',		//PUT ADMOB ADCODE HERE
                     interstitial: 'ca-app-pub-3838820812386239/2551267023'	//PUT ADMOB ADCODE HERE
                 }
             };
@@ -423,6 +423,7 @@ function registerAdEvents() {
 function showBannerFunc(){
     window.plugins.AdMob.createBannerView();
 }
+
 //display the interstitial
 function showInterstitialFunc(){
     window.plugins.AdMob.createInterstitialView();	//get the interstitials ready to be shown and show when it's loaded.
