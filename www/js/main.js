@@ -124,18 +124,21 @@ document.addEventListener('show', function (event) {
                     }
                 });
             }
-            showInterstitialFunc();
+            
             break;
         case "surah_text":
             console.log("surah text");
             select_surah();
             //showBannerFunc();
+            window.plugins.AdMob.destroyBannerView();
             break;
         case "settings":
             set_settings();
+            showBannerFunc();
             break;
         case "about":
             set_about_page();
+            showBannerFunc();
             break;
     }
 });
@@ -349,6 +352,8 @@ function display_surah_names(data)
         }
     }
     location.hash = "sura-" + (Number(selected_surah) - 1);
+    showInterstitialFunc();
+    window.plugins.AdMob.destroyBannerView();
 }
 
 function show_surah()
