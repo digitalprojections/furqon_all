@@ -10,6 +10,7 @@ var language = Boolean(localStorage.menu_language) ? localStorage.menu_language 
 var selected_surah = 1;
 var selected_title;
 var ayah_tracker = Boolean(localStorage.ayah_tracker) ? localStorage.ayah_tracker : {};
+var deviceready;
 
 var lang = {
     english: {
@@ -130,15 +131,24 @@ document.addEventListener('show', function (event) {
             console.log("surah text");
             select_surah();
             //showBannerFunc();
-            window.plugins.AdMob.destroyBannerView();
+            if(deviceready){
+                window.plugins.AdMob.destroyBannerView();
+            }
             break;
         case "settings":
             set_settings();
+            if (deviceready)
+    {
             showBannerFunc();
+    }
             break;
         case "about":
             set_about_page();
+            if (deviceready)
+    {
             showBannerFunc();
+    }
+        
             break;
     }
 });
@@ -269,6 +279,7 @@ function addListeners()
         window.FirebasePlugin.getToken(function (token) {
             // save this server-side and use it to push notifications to this device
             console.log("Device ready token", token);
+            deviceready = true;
         }, function (error) {
             console.error(error);
         });
@@ -352,8 +363,12 @@ function display_surah_names(data)
         }
     }
     location.hash = "sura-" + (Number(selected_surah) - 1);
-    showInterstitialFunc();
-    window.plugins.AdMob.destroyBannerView();
+    if (deviceready)
+    {
+        showInterstitialFunc();
+        window.plugins.AdMob.destroyBannerView();
+    }
+    
 }
 
 function show_surah()
@@ -432,7 +447,7 @@ function showBannerFunc(){
 }
 
 //display the interstitial
-function showInterstitialFunc(){
+function showInterstitialFunc(){    
     window.plugins.AdMob.createInterstitialView();	//get the interstitials ready to be shown and show when it's loaded.
     window.plugins.AdMob.requestInterstitialAd();
 }
