@@ -34,20 +34,7 @@ function show_surah_content_now()
     {
         for (var i = 0; i < big_data.length; i++)
         {
-            if (big_data[i]['DatabaseID'] == 1)
-            {
-                rows += `<ons-list-item id="ayah-${big_data[i]['VerseID']}" ><ons-row><ons-col><span class="ayah_id">${big_data[i]['VerseID']}</span></ons-col></ons-row>
-             <ons-row><ons-col class="arabic"><span class="ayah_text arabic">${big_data[i]['AyahText']}</span></ons-col></ons-row></ons-list-item>`;
-            } else {
-                
-                    var izohsiz = big_data[i]['AyahText'].replace(/\(/g, '<i class="zmdi zmdi-comment"></i><span class="qavs_ichi">');
-                    izohsiz = izohsiz.replace(/\)/g, '</span>');
-                    rows += `<ons-list-item tappable><ons-row><ons-col><span class="ayah_id">${big_data[i]['VerseID']}</span></ons-col></ons-row><ons-row><ons-col><span class="ayah_text">${izohsiz}</span></ons-col></ons-row></ons-list-item>`;
-                
-            }
-
-
-
+            rows = create_row(rows, i);
         }
     } else if (izoh_data.action == "surah_text_obj")
     {
@@ -59,6 +46,23 @@ function show_surah_content_now()
                     $(event.currentTarget).find(".qavs_ichi").toggle();
                     $(event.currentTarget).find(".zmdi-comment").toggle();
                 });
+                rows = "";
+                big_data = [];
+            }
+function create_row(rows, i)
+{
+    if (big_data[i]['DatabaseID'] == 1)
+            {
+                rows += `<ons-list-item id="ayah-${big_data[i]['VerseID']}" ><ons-row><ons-col><span class="ayah_id">${big_data[i]['VerseID']}</span></ons-col></ons-row>
+             <ons-row><ons-col class="arabic"><span class="ayah_text arabic">${big_data[i]['AyahText']}</span></ons-col></ons-row></ons-list-item>`;
+            } else {
+                
+                    var izohsiz = big_data[i]['AyahText'].replace(/\(/g, '<i class="zmdi zmdi-comment"></i><span class="qavs_ichi">');
+                    izohsiz = izohsiz.replace(/\)/g, '</span>');
+                    rows += `<ons-list-item tappable><ons-row><ons-col><span class="ayah_id">${big_data[i]['VerseID']}</span></ons-col></ons-row><ons-row><ons-col><span class="ayah_text">${izohsiz}</span></ons-col></ons-row></ons-list-item>`;
+                
+            }
+            return row;
 }
 
 function manage_object_stores(databaseName, selected_surah, rd) {
