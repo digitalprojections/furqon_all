@@ -103,4 +103,6 @@
     <plugin name="cordova-plugin-admob-simple" spec="^3.3.4" />
     <plugin name="cordova-plugin-firebase" spec="^1.0.5" />
     <engine name="android" spec="^7.0.0" />
+    <plugin name="cordova-plugin-inapppurchase" spec="^1.2.0" />
+    <plugin name="cordova-plugin-globalization" spec="^1.11.0" />
 </widget>

@@ -62,7 +62,7 @@ function create_row(rows, i)
                     rows += `<ons-list-item tappable><ons-row><ons-col><span class="ayah_id">${big_data[i]['VerseID']}</span></ons-col></ons-row><ons-row><ons-col><span class="ayah_text">${izohsiz}</span></ons-col></ons-row></ons-list-item>`;
                 
             }
-            return row;
+            return rows;
 }
 
 function manage_object_stores(databaseName, selected_surah, rd) {

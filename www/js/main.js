@@ -236,7 +236,7 @@ function ajax(d)
         },
         success: function (data) {
             document.querySelector('#loading_circle').hide();
-            if (data.indexOf("title") > 0)
+            if (data.indexOf("chapterId") > 0)
             {
                 var data = JSON.parse(data);
                 //display_surah_names(data);
