@@ -21,8 +21,8 @@
       "monaca-plugin-monaca-core": {},
       "cordova-plugin-native-transitions": {},
       "cordova-plugin-admob-simple": {},
-      "cordova-plugin-firebase": {},
-      "cordova-plugin-globalization": {}
+      "cordova-plugin-globalization": {},
+      "cordova-plugin-firebase": {}
     },
     "platforms": [
       "android"
