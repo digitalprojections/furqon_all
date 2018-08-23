@@ -4,5 +4,5 @@ keystore.private
 google-services.json
 build.json
 /node_modules/
-/plugins/
+/plugins/*
 /www/
