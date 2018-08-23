@@ -1,0 +1,10 @@
+{
+  "com.jareddickson.cordova.tag-manager": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-tag-manager"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

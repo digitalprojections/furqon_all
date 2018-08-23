@@ -1,0 +1,64 @@
+{
+  "_from": "cordova-plugin-tag-manager",
+  "_id": "cordova-plugin-tag-manager@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-Y+pXN9d2sOinr/ulnPoUOBHA+SM=",
+  "_location": "/cordova-plugin-tag-manager",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-tag-manager",
+    "name": "cordova-plugin-tag-manager",
+    "escapedName": "cordova-plugin-tag-manager",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-tag-manager/-/cordova-plugin-tag-manager-1.0.1.tgz",
+  "_shasum": "63ea5737d776b0e8a7affba59cfa143811c0f923",
+  "_spec": "cordova-plugin-tag-manager",
+  "_where": "C:\\Users\\aj\\furqon_all",
+  "author": {
+    "name": "Jared Dickson",
+    "email": "code@jareddickson.com"
+  },
+  "bugs": {
+    "url": "https://github.com/kraihn/cordova-plugin-tag-manager/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com.jareddickson.cordova.tag-manager",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Google Tag Manager plugin for analytics tracking with support for events and pageviews.",
+  "homepage": "https://github.com/kraihn/cordova-plugin-tag-manager#readme",
+  "keywords": [
+    "cordova",
+    "tag manager",
+    "google tag manager",
+    "gtm",
+    "analytics",
+    "tracking",
+    "universal analytics",
+    "mobile analytics",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-tag-manager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraihn/cordova-plugin-tag-manager.git"
+  },
+  "version": "1.0.1"
+}
