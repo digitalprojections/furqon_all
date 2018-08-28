@@ -92,7 +92,6 @@
     </platform>
     <preference name="WindowsStorePublisherName" value="My Name" />
     <preference name="WindowsStoreIdentityName" value="06ecdeb7-fd82-deb7-b86e-2a6d506d4533" />
-    <plugin name="cordova-plugin-native-transitions" spec="^0.2.3" />
     <access origin="*" />
     <preference name="KeepRunning" value="true" />
     <preference name="monaca:AndroidIsPackageNameSeparate" value="false" />
@@ -101,7 +100,5 @@
     <preference name="SplashScreenDelay" value="0" />
     <preference name="Fullscreen" value="false" />
     <plugin name="cordova-plugin-admob-simple" spec="^3.3.4" />
-    <plugin name="cordova-plugin-globalization" spec="^1.11.0" />
     <plugin name="cordova-plugin-firebase" spec="^1.0.5" />
-    <engine name="android" spec="^7.0.0" />
 </widget>
