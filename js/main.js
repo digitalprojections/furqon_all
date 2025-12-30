@@ -1,6 +1,6 @@
 
 $.ajax({
-    url: "https://ajpage.janjapanweb.com/ajax_quran.php",
+    url: "https://created.link/php/ajax_quran.php",
     type: "POST",
     contentType: "application/x-www-form-urlencoded",
     data: {
@@ -59,7 +59,7 @@ function select_surah(event) {
 function ajax(d)
 {
     $.ajax({
-        url: "https://ajpage.janjapanweb.com/ajax_quran.php",
+        url: "https://created.link/php/ajax_quran.php",
         type: "POST",
         contentType: "application/x-www-form-urlencoded",
         data: d,
